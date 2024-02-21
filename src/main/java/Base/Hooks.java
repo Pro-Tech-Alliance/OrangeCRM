@@ -33,7 +33,6 @@ public class Hooks {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
                 driver = new ChromeDriver(chromeOptions);
                 break;
 
@@ -57,6 +56,6 @@ public class Hooks {
     }
     @AfterTest
     public void tearDown(){
-        driver.quit();
+      // driver.quit();
     }
 }
